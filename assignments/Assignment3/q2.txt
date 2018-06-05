@@ -1,0 +1,1 @@
+no because we can not make connection between two seprate programs using pipes. pipes helps when both processes have same PCB and sharing PCB'S

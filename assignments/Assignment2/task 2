@@ -1,0 +1,81 @@
+						=====1====
+
+#include<stdio.h>
+#include<unistd.h>
+#include<sys/types.h>
+#include<string.h>
+
+void main(int argc,char *argv[])
+	{
+		if(!(strcmp("process",argv[1])))
+		execl("/bin/ps","process",NULL);
+		if(!(strcmp("path",argv[1])))
+		execl("/bin/pwd","path",NULL);
+		if(!(strcmp("list",argv[1])))
+		execl("/bin/ls","list",NULL);
+
+	}
+
+
+
+=============================================================================================================================================
+
+
+						====2===
+
+#include<stdio.h>
+#include<unistd.h>
+#include<sys/types.h>
+#include<string.h>
+
+void main(int argc,char *argv[])
+{
+		char a[50];
+		do
+		{
+			printf("Linux@root:~");
+			scanf("%s",a);
+
+
+			if(!fork())
+			{
+			execlp(a,a,NULL);
+			printf("\n command not found");
+
+			}
+		}while(1);
+		
+}
+
+============================================================================================================================================
+
+						====3===
+
+#include<stdio.h>
+#include<unistd.h>
+#include<sys/types.h>
+#include<string.h>
+
+void main(int argc,char *argv[])
+{
+		char x[50];
+		char y[50];
+		do
+		{
+			printf("Linux@root:~");
+			scanf("%s",x);
+			scanf("%s",y);
+
+
+			if(!fork())
+			{
+			execlp(x,x,y,NULL);
+			printf("\n command not found");
+
+			}
+		}while(1);
+		
+}
+
+
+
